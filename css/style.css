@@ -3565,9 +3565,11 @@ textarea.form-control {
   margin-bottom: 40px; }
   .stat-counter .item {
     border-right: 1px solid #eaeaea;
-    padding: 10px 30px; }
+    padding: 10px 30px;
+    min-width: 155px; }
     .stat-counter .item:first-child {
-      padding-left: 0; }
+      padding-left: 0;
+      min-width: 125px; }
     .stat-counter .item:last-child {
       border-right: 0; }
 

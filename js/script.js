@@ -81,6 +81,14 @@ $(document).ready(function(){
 		
 	});
 	
+	/* =================================
+	COUNTER
+	=================================== */
+	$('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+
 
 	/* =================================
 	OWL
@@ -161,7 +169,6 @@ $(document).ready(function(){
 	=================================== */	
 
 	$(window).load(function(){
-
 		// INITIALIZE ISOTOPE
 		$('.list-column').isotope({
 			itemSelector: '.news-item'
