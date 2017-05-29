@@ -16,9 +16,11 @@ $(document).ready(function(){
 		var batas = jQuery(window).height();
 
 		if ( top > batas ) {
-			jQuery('.navbar-main').addClass('stiky');
+			$('.navbar-main').addClass('stiky');
+			$('.navbar-nav').addClass('navbar-right');
 		}else {
-			jQuery('.navbar-main').removeClass('stiky'); 
+			$('.navbar-main').removeClass('stiky'); 
+			$('.navbar-nav').removeClass('navbar-right');
 		}
 	});
 	
@@ -193,6 +195,22 @@ $(document).ready(function(){
 			});
 			return false;
 	 	});
+	});
+
+	/* =================================
+	SCROLL TO
+	=================================== */
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $(this.getAttribute('href'));
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').stop().animate({
+	            scrollTop: target.offset().top
+	        }, 1000);
+	    }
+
 	});
 
 	/* =================================

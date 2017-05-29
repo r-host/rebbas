@@ -3123,14 +3123,16 @@ textarea.form-control {
       float: none;
       position: absolute;
       top: -90px; }
-    .navbar-main.navbar_c1.stiky .navbar-brand {
-      float: left;
-      position: static; }
-    .navbar-main.navbar_c1.stiky .navbar-nav {
-      float: right !important;
-      margin-right: -15px; }
-    .navbar-main.navbar_c1.stiky .navbar-form {
-      display: none; }
+    .navbar-main.navbar_c1.stiky {
+      	    	/*.navbar-nav{
+      	    		float: right !important;
+          			margin-right: -15px;
+      	    	}*/ }
+      .navbar-main.navbar_c1.stiky .navbar-brand {
+        float: left;
+        position: static; }
+      .navbar-main.navbar_c1.stiky .navbar-form {
+        display: none; }
     .navbar-main.navbar_c1 .navbar-form input[type=text] {
       -webkit-border-radius: 30px;
       -moz-border-radius: 30px;
