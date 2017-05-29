@@ -14,13 +14,20 @@ $(document).ready(function(){
 	jQuery(window).scroll(function () {
 		var top = jQuery(document).scrollTop();
 		var batas = jQuery(window).height();
+		var header = jQuery('#header');
 
 		if ( top > batas ) {
 			$('.navbar-main').addClass('stiky');
 			$('.navbar-nav').addClass('navbar-right');
 		}else {
-			$('.navbar-main').removeClass('stiky'); 
-			$('.navbar-nav').removeClass('navbar-right');
+			if( header.hasClass('header-1') || header.hasClass('header-2') || header.hasClass('header-4')){
+				$('.navbar-main').removeClass('stiky'); 
+			}else{
+				$('.navbar-main').removeClass('stiky'); 
+				$('.navbar-nav').removeClass('navbar-right');
+			}
+			
+
 		}
 	});
 	

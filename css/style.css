@@ -562,14 +562,17 @@ i, cite, em, var, address, dfn {
 .color-primary {
   color: #f9c000; }
 
-.section {
-  position: relative; }
-  .section.section-border > .container {
-    border-bottom: 1px solid #eee; }
-
-.pad {
+.pad, .section.pad.section-border > .container {
   padding-top: 80px;
   padding-bottom: 80px; }
+
+.section {
+  position: relative; }
+  .section.pad.section-border, .section.pad.section-border > .section.section-border.container {
+    padding-top: 0;
+    padding-bottom: 0; }
+    .section.pad.section-border > .container, .section.pad.section-border > .section.section-border.container > .container {
+      border-bottom: 1px solid #eee; }
 
 .bglight {
   background-color: #f6f6f6; }
@@ -1166,6 +1169,9 @@ textarea.form-control {
     font-family: "metropolisbold", Helvetica, Arial, sans-serif;
     background-color: transparent; }
 
+@media (max-width: 767px) {
+  .searchbox {
+    display: none; } }
 .searchbox-input {
   top: 0;
   right: 0;
@@ -2789,7 +2795,7 @@ textarea.form-control {
       padding-right: 10px; }
   @media (max-width: 768px) {
     .meta-blog > div, .single-news .meta > div, .list-news .news-item .meta > div, .list-column .news-item .meta > div {
-      display: block;
+      display: inline-block;
       float: none;
       margin-bottom: 10px; }
       .meta-blog > div:last-child, .single-news .meta > div:last-child, .list-news .news-item .meta > div:last-child, .list-column .news-item .meta > div:last-child {
@@ -2820,9 +2826,17 @@ textarea.form-control {
 .list-column.column-2 .news-item {
   width: 45%;
   margin-right: 5%; }
+@media (max-width: 767px) {
+  .list-column.column-2 .news-item {
+    width: 100%;
+    margin-right: 0; } }
 .list-column.column-3 .news-item {
   width: 30%;
   margin-right: 3%; }
+@media (max-width: 767px) {
+  .list-column.column-3 .news-item {
+    width: 100%;
+    margin-right: 0; } }
 .list-column .news-item {
   padding-top: 50px;
   padding-bottom: 40px;
@@ -2923,6 +2937,9 @@ textarea.form-control {
               -webkit-transition: all 0.4s ease;
               -o-transition: all 0.4s ease;
               transition: all 0.4s ease; }
+            @media (max-width: 767px) {
+              .timeline .year-timeline .single-timeline-item .month .box .date h5:before, .timeline .year-timeline .single-timeline-item .month .box .date .section-subheading:before, .timeline .year-timeline .single-timeline-item .month .box .date .testimonial-1 .title:before, .testimonial-1 .timeline .year-timeline .single-timeline-item .month .box .date .title:before, .timeline .year-timeline .single-timeline-item .month .box .date .testimonial-2 .title:before, .testimonial-2 .timeline .year-timeline .single-timeline-item .month .box .date .title:before, .timeline .year-timeline .single-timeline-item .month .box .date h5:after, .timeline .year-timeline .single-timeline-item .month .box .date .section-subheading:after, .timeline .year-timeline .single-timeline-item .month .box .date .testimonial-1 .title:after, .testimonial-1 .timeline .year-timeline .single-timeline-item .month .box .date .title:after, .timeline .year-timeline .single-timeline-item .month .box .date .testimonial-2 .title:after, .testimonial-2 .timeline .year-timeline .single-timeline-item .month .box .date .title:after {
+                display: none; } }
     .timeline .year-timeline .single-timeline-item .text-holder {
       margin-left: 55px;
       padding: 0 0 0 12px;
@@ -2954,6 +2971,17 @@ textarea.form-control {
           color: #f9c000; }
         .timeline .year-timeline .single-timeline-item:hover .month .box .date h5:after, .timeline .year-timeline .single-timeline-item:hover .month .box .date .section-subheading:after, .timeline .year-timeline .single-timeline-item:hover .month .box .date .testimonial-1 .title:after, .testimonial-1 .timeline .year-timeline .single-timeline-item:hover .month .box .date .title:after, .timeline .year-timeline .single-timeline-item:hover .month .box .date .testimonial-2 .title:after, .testimonial-2 .timeline .year-timeline .single-timeline-item:hover .month .box .date .title:after {
           background: #f9c000; }
+@media (max-width: 767px) {
+  .timeline .year-timeline:before {
+    display: none; }
+  .timeline .year-timeline .year {
+    left: 0; }
+  .timeline .year-timeline .single-timeline-item {
+    padding-left: 0; }
+    .timeline .year-timeline .single-timeline-item .month {
+      position: static; }
+    .timeline .year-timeline .single-timeline-item .text-holder {
+      margin-left: 0; } }
 
 /* SKILLSHEET **/
 .progress-bar-2 .skill {
@@ -3012,20 +3040,23 @@ textarea.form-control {
  * -----------------------------------------------------------------------------
  */
 /* 4.1 - TOPBAR */
-.topbar {
+.header .topbar {
   background-color: rgba(0, 0, 0, 0.04);
   height: 48px; }
-  .topbar .topbar-left {
+  .header .topbar .topbar-left {
     color: rgba(51, 51, 51, 0.8);
     font-size: 12px;
     line-height: 40px; }
-    .topbar .topbar-left .fa {
+    .header .topbar .topbar-left .fa {
       margin-right: 5px; }
-  .topbar .topbar-right {
+  .header .topbar .topbar-right {
     text-align: right;
     font-size: 13px; }
-    .topbar .topbar-right .fa {
+    .header .topbar .topbar-right .fa {
       margin-right: 10px; }
+.header.header-5 .topbar {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04); }
 
 .topbar-logo {
   background-color: #ffffff;
@@ -3069,7 +3100,7 @@ textarea.form-control {
   .navbar-main > .container {
     position: relative; }
   .navbar-main .navbar-brand {
-    padding: 6px 0 0 15px;
+    padding: 6px 0 0 20px;
     height: 60px;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out; }
@@ -3207,8 +3238,10 @@ textarea.form-control {
     .header-2 .navbar-main .header-search .search {
       display: inline-block;
       /*display: none;*/ }
-  .header-2 .navbar-main.stiky .container-nav {
-    padding: 5px 15px; }
+  .header-2 .navbar-main.stiky {
+    position: fixed; }
+    .header-2 .navbar-main.stiky .container-nav {
+      padding: 5px 15px; }
 
 .header-3 {
   position: absolute;
@@ -3229,6 +3262,8 @@ textarea.form-control {
     color: #333333; }
     .header-3 .navbar-main .nav > li > a:hover {
       color: #ffffff; }
+  .header-3 .navbar-main.stiky > .container-nav {
+    background: #ffffff; }
   .header-3 .navbar-main.stiky .navbar-brand {
     float: left;
     position: static; }
@@ -3275,8 +3310,10 @@ textarea.form-control {
     .header-4 .navbar-main .header-search .search {
       display: inline-block;
       /*display: none;*/ }
-  .header-4 .navbar-main.stiky .container-nav {
-    padding: 5px 15px; }
+  .header-4 .navbar-main.stiky {
+    position: fixed; }
+    .header-4 .navbar-main.stiky .container-nav {
+      padding: 5px 15px; }
 
 .header-5 {
   position: absolute;
@@ -3329,6 +3366,39 @@ textarea.form-control {
     background-color: transparent;
     padding-top: 2px; }
 
+@media (max-width: 767px) {
+  .header .navbar-main .navbar-nav {
+    margin-left: 0;
+    margin-right: 0; }
+  .header .navbar-main .nav li a {
+    color: #333333; }
+  .header .navbar-main.navbar_c1 {
+    background: #ffffff; }
+    .header .navbar-main.navbar_c1 .navbar-brand {
+      float: left;
+      position: static; }
+  .header.header-2 .navbar-main {
+    background: #ffffff; }
+  .header.header-3 .navbar-main {
+    background: #ffffff; }
+    .header.header-3 .navbar-main > .container-nav {
+      background: #ffffff; }
+    .header.header-3 .navbar-main .navbar-brand {
+      float: left;
+      position: static; }
+  .header.header-4 .navbar-main {
+    background: #ffffff; }
+    .header.header-4 .navbar-main .navbar-brand {
+      float: left;
+      position: static; }
+  .header.header-5 .navbar-main {
+    background: #ffffff; }
+    .header.header-5 .navbar-main .navbar-brand {
+      float: left;
+      position: static; }
+
+  .topbar-info {
+    display: none; } }
 /**
  * 5. - HOME
  * -----------------------------------------------------------------------------
@@ -3577,7 +3647,11 @@ textarea.form-control {
 
 @media (max-width: 767px) {
   .stat-counter {
-    display: initial; } }
+    display: inherit;
+    clear: both; }
+    .stat-counter .item {
+      border-right: 0;
+      padding-left: 0; } }
 .about-company {
   padding-top: 80px;
   background: #f6f6f6 url(../images/about-img-2.png) bottom right no-repeat; }
@@ -3829,18 +3903,18 @@ textarea.form-control {
       clear: both; }
   .comments-box .media-heading {
     color: #333;
-    font-weight: 600; }
+    font-family: "metropolisbold", Helvetica, Arial, sans-serif; }
   .comments-box .comments-box .media-left img {
     width: 100px;
     height: 100px; }
   .comments-box .date {
     float: right;
-    color: rgba(51, 51, 51, 0.3); }
-  .comments-box .replay {
+    color: rgba(51, 51, 51, 0.7); }
+  .comments-box .reply {
     margin-top: 5px; }
-    .comments-box .replay a {
-      color: rgba(51, 51, 51, 0.3); }
-      .comments-box .replay a:hover {
+    .comments-box .reply a {
+      color: rgba(51, 51, 51, 0.7); }
+      .comments-box .reply a:hover {
         color: #f9c000; }
 
 .comments-box .title-heading,
@@ -3888,6 +3962,16 @@ textarea.form-control {
   max-width: 30%;
   display: table-cell; }
 
+@media (max-width: 767px) {
+  .cta-content {
+    padding-right: 0;
+    text-align: center;
+    padding-bottom: 40px; }
+
+  .cta-action {
+    max-width: 100%;
+    display: block;
+    text-align: center; } }
 /* GOOGLE MAPS */
 .maps-wraper {
   position: relative; }
@@ -3941,14 +4025,14 @@ textarea.form-control {
   width: 32px;
   cursor: pointer;
   margin-left: 10px;
-  background-color: #2e96db;
+  background-color: #f9c000;
   background-repeat: no-repeat;
   background-size: 32px 64px;
   background-image: url("../images/cd-icon-controller.svg"); }
-
-.no-touch #cd-zoom-in:hover,
-.no-touch #cd-zoom-out:hover {
-  background-color: #f9c000; }
+  #cd-zoom-in:hover, #cd-zoom-in:hover,
+  #cd-zoom-out:hover,
+  #cd-zoom-out:hover {
+    background-color: #c69900; }
 
 #cd-zoom-in {
   background-position: 50% 0;
@@ -4149,16 +4233,6 @@ textarea.form-control {
 
   .nav > li > a {
     padding: 10px 25px; }
-
-  .testimonial-1 .media {
-    clear: both;
-    display: block;
-    max-width: 300px;
-    margin-bottom: 40px;
-    margin-right: 0; }
-  .testimonial-1 .body {
-    clear: both;
-    display: block; }
 
   .cta .cta-info {
     width: 100%; } }

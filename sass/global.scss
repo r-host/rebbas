@@ -329,17 +329,23 @@ i, cite, em, var, address, dfn {
 	color: $color_3;
 }
 
-.section {
-	position: relative;
-	&.section-border{
-		> .container {
-  			border-bottom: 1px solid #eee; 
-  		}
-	}
-}
 .pad{
 	padding-top: 80px;
     padding-bottom: 80px;
+}
+
+.section {
+	position: relative;
+	&.pad{
+		&.section-border{
+			padding-top: 0;
+	    	padding-bottom: 0;
+			> .container {
+	  			border-bottom: 1px solid #eee; 
+	  			@extend .pad;
+	  		}
+		}
+	}
 }
 
 .bglight{

@@ -23,6 +23,9 @@
 	CSS VENDOR
 	=============================================== -->
 	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
+    <!-- Bootstrap Dropdown Hover CSS -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-dropdownhover.min.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/simple-line-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
@@ -136,7 +139,7 @@
 					</a>
 				</div>
 
-				<nav class="navbar-collapse collapse">
+				<nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeInDownNew fadeInRightNew fadeInUpNew fadeInLeftNew">
 					<ul class="nav navbar-nav">
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
@@ -149,7 +152,7 @@
 							<li><a href="index-5.html">Homepage V</a></li>
 						  </ul>
 						</li>
-						<li class="dropdown">
+						<li class="dropdown active">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Company</a>
 						  <ul class="dropdown-menu">
 							<li><a href="company-history.html">Our History</a></li>
@@ -162,7 +165,6 @@
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Newsfeed</a>
 						  <ul class="dropdown-menu">
-							<li><a href="blog.html">Blog</a></li>
 							<li><a href="blog-single.html">Single Post</a></li>
 							<li><a href="blog-sidebar.html">Left Sidebar</a></li>
 							<li><a href="blog-2-columns.html">2 Columns</a></li>
@@ -172,21 +174,11 @@
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 						  <ul class="dropdown-menu">
-							<li><a href="pages-typography.html">Typography</a>
-								<ul class="dropdown-menu">
-									<li><a href="pages-code.html">Code</a></li>
-									<li><a href="pages-tables.html">Tables</a></li>
-									<li><a href="pages-forms.html">Forms</a></li>
-									<li><a href="pages-buttons.html">Buttons</a></li>
-							    </ul>
-							</li>
-							<li><a href="news-sidebar.html">HTML Page</a>
-								<ul class="dropdown-menu">
-									<li><a href="pages-search-result.html">Search Result</a></li>
-									<li><a href="pages-registration-form.html">Registration Form</a></li>
-									<li><a href="blog-single.html">Single Article</a></li>
-							    </ul>
-							</li>
+							<li><a href="pages-typography.html">Typography</a></li>
+							<li><a href="pages-code.html">Code</a></li>
+							<li><a href="pages-tables.html">Tables</a></li>
+							<li><a href="pages-forms.html">Forms</a></li>
+							<li><a href="pages-buttons.html">Buttons</a></li>
 						  </ul>
 						</li>
 						<li class="dropdown">
@@ -196,6 +188,7 @@
 							<li><a href="portfolio-with-space.html">With Space</a></li>
 							<li><a href="portfolio-without-space.html">Without Space</a></li>
 							<li><a href="portfolio-masonry.html">Masonry</a></li>
+							<li><a href="portfolio-single.html">Single Portfolio</a></li>
 						  </ul>
 						</li>
 						<li> <a href="contact.html">Contact Us</a> </li>
@@ -438,74 +431,75 @@
 
 				<div class="clearfix"></div>
 				
-				<div id="testimony2">
-					<!-- Item 1 -->
-					<div class="item">
-						<div class="testimonial-2">
-							<div class="body">
-								<p>I really enjoy working with Tore and his team. He brings a ton of idea to me and Lorem ipsum dolor amet elit. Natoque nascetur ridiculus nascetur.</p>
+				<div class="col-sm-12 col-md-12">
+					<div id="testimony2">
+						<!-- Item 1 -->
+						<div class="item">
+							<div class="testimonial-2">
+								<div class="body">
+									<p>I really enjoy working with Tore and his team. He brings a ton of idea to me and Lorem ipsum dolor amet elit. Natoque nascetur ridiculus nascetur.</p>
+								</div>
+								<div class="media">
+									<img src="images/testimonial-1.jpg" alt="">
+								</div>
+								<div class="person">
+									<div class="title">Ben Kapok</div>
+									<div class="company">Photodile</div>
+								</div>
+								<div class="clearfix"></div>
 							</div>
-							<div class="media">
-								<img src="images/testimonial-1.jpg" alt="">
-							</div>
-							<div class="person">
-								<div class="title">Ben Kapok</div>
-								<div class="company">Photodile</div>
-							</div>
-							<div class="clearfix"></div>
 						</div>
-					</div>
-					<!-- Item 2 -->
-					<div class="item">
-						<div class="testimonial-2">
-							<div class="body">
-								<p>He brings a ton of idea to me and Lorem ipsum dolor sit amet, consectetuer adipiscing aenean ligula eget bibendum sodales natoque penatibus nascetur.</p>
+						<!-- Item 2 -->
+						<div class="item">
+							<div class="testimonial-2">
+								<div class="body">
+									<p>He brings a ton of idea to me and Lorem ipsum dolor sit amet, consectetuer adipiscing aenean ligula eget bibendum sodales natoque penatibus nascetur.</p>
+								</div>
+								<div class="media">
+									<img src="images/testimonial-2.jpg" alt="">
+								</div>
+								<div class="person">
+									<div class="title">JOHN THOR</div>
+									<div class="company">69 Designs</div>
+								</div>
+								<div class="clearfix"></div>
 							</div>
-							<div class="media">
-								<img src="images/testimonial-2.jpg" alt="">
-							</div>
-							<div class="person">
-								<div class="title">JOHN THOR</div>
-								<div class="company">69 Designs</div>
-							</div>
-							<div class="clearfix"></div>
 						</div>
-					</div>
-					<!-- Item 3 -->
-					<div class="item">
-						<div class="testimonial-2">
-							<div class="body">
-								<p>I really enjoy working with Tore and his team. He brings a ton of idea to me and Lorem ipsum dolor amet elit. Natoque nascetur ridiculus nascetur.</p>
+						<!-- Item 3 -->
+						<div class="item">
+							<div class="testimonial-2">
+								<div class="body">
+									<p>I really enjoy working with Tore and his team. He brings a ton of idea to me and Lorem ipsum dolor amet elit. Natoque nascetur ridiculus nascetur.</p>
+								</div>
+								<div class="media">
+									<img src="images/testimonial-3.jpg" alt="">
+								</div>
+								<div class="person">
+									<div class="title">Oliver Giro</div>
+									<div class="company">Photodile</div>
+								</div>
+								<div class="clearfix"></div>
 							</div>
-							<div class="media">
-								<img src="images/testimonial-3.jpg" alt="">
-							</div>
-							<div class="person">
-								<div class="title">Oliver Giro</div>
-								<div class="company">Photodile</div>
-							</div>
-							<div class="clearfix"></div>
 						</div>
-					</div>
-					<!-- Item 4 -->
-					<div class="item">
-						<div class="testimonial-2">
-							<div class="body">
-								<p>He brings a ton of idea to me and Lorem ipsum dolor sit amet, consectetuer adipiscing aenean ligula eget bibendum sodales natoque penatibus nascetur.</p>
+						<!-- Item 4 -->
+						<div class="item">
+							<div class="testimonial-2">
+								<div class="body">
+									<p>He brings a ton of idea to me and Lorem ipsum dolor sit amet, consectetuer adipiscing aenean ligula eget bibendum sodales natoque penatibus nascetur.</p>
+								</div>
+								<div class="media">
+									<img src="images/testimonial-4.jpg" alt="">
+								</div>
+								<div class="person">
+									<div class="title">Alex Sanchez</div>
+									<div class="company">Photodile</div>
+								</div>
+								<div class="clearfix"></div>
 							</div>
-							<div class="media">
-								<img src="images/testimonial-4.jpg" alt="">
-							</div>
-							<div class="person">
-								<div class="title">Alex Sanchez</div>
-								<div class="company">Photodile</div>
-							</div>
-							<div class="clearfix"></div>
 						</div>
-					</div>
 
+					</div>
 				</div>
-
 			</div>
 
 		</div>
@@ -587,8 +581,11 @@
 	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.superslides.js"></script>
 	<script type="text/javascript" src="js/vendor/owl.carousel.js"></script>
-	<script type="text/javascript" src="js/vendor/bootstrap-hover-dropdown.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap-dropdownhover.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/vendor/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.counterup.min.js"></script>
+	<script type="text/javascript" src="js/vendor/isotope.pkgd.min.js"></script>
 	
 	<!-- sendmail -->
 	<script type="text/javascript" src="js/vendor/validator.min.js"></script>

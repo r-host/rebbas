@@ -23,6 +23,9 @@
 	CSS VENDOR
 	=============================================== -->
 	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
+    <!-- Bootstrap Dropdown Hover CSS -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-dropdownhover.min.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/simple-line-icons.css">
 	<link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
@@ -46,7 +49,7 @@
 	</div>
 	
 	<!-- HEADER -->
-    <div class="header">
+    <div id="header" class="header">
 
     	<!-- TOPBAR -->
 		<div class="topbar">
@@ -136,7 +139,7 @@
 					</a>
 				</div>
 
-				<nav class="navbar-collapse collapse">
+				<nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeInDownNew fadeInRightNew fadeInUpNew fadeInLeftNew">
 					<ul class="nav navbar-nav">
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
@@ -171,21 +174,11 @@
 						<li class="dropdown">
 						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 						  <ul class="dropdown-menu">
-							<li><a href="pages-typography.html">Typography</a>
-								<ul class="dropdown-menu">
-									<li><a href="pages-code.html">Code</a></li>
-									<li><a href="pages-tables.html">Tables</a></li>
-									<li><a href="pages-forms.html">Forms</a></li>
-									<li><a href="pages-buttons.html">Buttons</a></li>
-							    </ul>
-							</li>
-							<li><a href="news-sidebar.html">HTML Page</a>
-								<ul class="dropdown-menu">
-									<li><a href="pages-search-result.html">Search Result</a></li>
-									<li><a href="pages-registration-form.html">Registration Form</a></li>
-									<li><a href="blog-single.html">Single Article</a></li>
-							    </ul>
-							</li>
+							<li><a href="pages-typography.html">Typography</a></li>
+							<li><a href="pages-code.html">Code</a></li>
+							<li><a href="pages-tables.html">Tables</a></li>
+							<li><a href="pages-forms.html">Forms</a></li>
+							<li><a href="pages-buttons.html">Buttons</a></li>
 						  </ul>
 						</li>
 						<li class="dropdown">
@@ -195,6 +188,7 @@
 							<li><a href="portfolio-with-space.html">With Space</a></li>
 							<li><a href="portfolio-without-space.html">Without Space</a></li>
 							<li><a href="portfolio-masonry.html">Masonry</a></li>
+							<li><a href="portfolio-single.html">Single Portfolio</a></li>
 						  </ul>
 						</li>
 						<li> <a href="contact.html">Contact Us</a> </li>
@@ -426,8 +420,11 @@
 	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.superslides.js"></script>
 	<script type="text/javascript" src="js/vendor/owl.carousel.js"></script>
-	<script type="text/javascript" src="js/vendor/bootstrap-hover-dropdown.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap-dropdownhover.min.js"></script>
 	<script type="text/javascript" src="js/vendor/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/vendor/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.counterup.min.js"></script>
+	<script type="text/javascript" src="js/vendor/isotope.pkgd.min.js"></script>
 	
 	<!-- sendmail -->
 	<script type="text/javascript" src="js/vendor/validator.min.js"></script>
