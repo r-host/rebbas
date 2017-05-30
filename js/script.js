@@ -223,6 +223,29 @@ $(document).ready(function(){
 	/* =================================
 	MAGNIFIC POPUP
 	=================================== */
+	$('.skill-progress .skill').each(function () {
+	    var $this = $(this);
+	    var myVal = $(this).data("value");
+	    var mypercent = $(this).attr("data-percent");
+	    var targetbox = $(this).children('.outer-box');
+	    $this.appear(function() {
+	        $(window).one('scroll', function() {
+	            progress(mypercent, $(targetbox));
+	        });
+	    });
+
+  		function progress(percent, $element) {
+          	var myItem = $element.children('div');
+          	myItem.append('<span></sapn>');
+
+          	var progressBarWidth = percent * $element.width() / 100;
+          	$element.find('div').animate({ width: progressBarWidth }, 2000).find('span').html(percent + "% ");
+      	}
+  	});
+
+	/* =================================
+	MAGNIFIC POPUP
+	=================================== */
 	$('.portfolio-isotop').magnificPopup({
 		delegate: 'a.btnzoom',
 		type: 'image',
