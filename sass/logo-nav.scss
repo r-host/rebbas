@@ -101,11 +101,12 @@
   	.nav > li > a {
   		font-family: $font_1bold;
 		color: $font__navbar-color;
+	    padding: 20px 18px;
   	}
 	.nav > li.active > a,
 	.nav > li > a:hover,
 	.nav > li > a:focus {
-		color: $font__navbar-hover-color;
+		color: #f9c000 ;
 		background-color: transparent;
 	}  
 	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
@@ -171,9 +172,14 @@
     		input[type=text]{
 	    		@include border-radius(30px);
 	    		height: auto;
-	    		background: darken($navbar_c1, 10);
+		        padding: 8px 20px;
+	    		background: rgba(34,34,34,0.25);
 	    		border: 0;
 	    		color: $white;
+	    		padding: 10px 13px;
+	    		&::-webkit-input-placeholder {
+				  color: $white;
+				}
     		}
     	}
     }
@@ -316,7 +322,7 @@
 			top: -90px;
     	}
     	.nav > li > a {
-			color: $black_3;
+			color: $black_1;
 			&:hover{
 				color: $white;
 			}
@@ -344,18 +350,19 @@
 	    		background: darken($color_3, 10);
 	    		border: 0;
 	    		color: $white;
-    		&::-webkit-input-placeholder {
-			    color: $white;
-			}
-			&:-moz-placeholder {
-			    color: $white;
-			}
-			&::-moz-placeholder {
-			    color: $white;
-			}
-			&:-ms-input-placeholder {
-			    color: $white;
-			}
+    		    padding: 10px 13px;
+	    		&::-webkit-input-placeholder {
+				    color: $white;
+				}
+				&:-moz-placeholder {
+				    color: $white;
+				}
+				&::-moz-placeholder {
+				    color: $white;
+				}
+				&:-ms-input-placeholder {
+				    color: $white;
+				}
     		}
     	}
     	.navbar-right {

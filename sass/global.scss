@@ -6,7 +6,7 @@ select,
 textarea {
 	color: $font__body-color;
 	font-family: $font_1;
-	font-size: 16px;
+	font-size: 14px;
     line-height: 2;
 }
 
@@ -331,7 +331,7 @@ i, cite, em, var, address, dfn {
 
 .pad{
 	padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .section {
@@ -623,6 +623,10 @@ ul.circle{
 	height: 70px;
 	@include clearfix;
 }
+.spacer-100{
+	height: 100px;
+	@include clearfix;
+}
 
 /* Typography */
 .page-header{
@@ -862,10 +866,11 @@ pre {
 	height: 12px;
     background: transparent;
     border: 1px solid #999999;
+    margin: 5px 3px;
 }
 .owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: $color_3;
+    background: #999999;
     border-color: transparent;
 }
 .owl-theme .owl-controls {
@@ -934,7 +939,8 @@ textarea.form-control{
 		@extend h3;
 	    letter-spacing: -0.5px;
 	    color: $white;
-	    font-family: $font_1bold;
+	    font-family: $font_1;
+	    font-size: 16px;
 	    margin-bottom: 30px;
 	}
 }

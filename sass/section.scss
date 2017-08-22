@@ -26,6 +26,7 @@
 	text-align: center;
     font-family: $font_landing;
     margin-bottom: 80px;
+    padding-bottom: 12px;
 	.heading{
     	font-family: $font_2;
 	    font-size: 47px;
@@ -37,10 +38,10 @@
     	font-weight: 700;
 	}
 	p{
-	    font-size: 19px;
-	    line-height: 28px;
+	    font-size: 18px;
 	    color: rgba($black_3, .8);
 	    font-weight: 300;
+	    font-family: $font_1;
 	}
 }
 
@@ -100,7 +101,7 @@
 /* ABOUT */
 .about-history{
 	padding-top: 80px;
-	padding-bottom: 0;
+	padding-bottom: 40px;
 }
 .about-content-left{
 	padding-right: 40px;
@@ -130,7 +131,7 @@
 
 	.item{
 	    border-right: 1px solid #eaeaea;
-	    padding: 10px 30px;
+	    padding: 10px 45px;
 	    min-width: 155px;
 	    &:first-child{
 	    	padding-left: 0;
@@ -231,13 +232,16 @@
 	    margin-right: -999em;
 	    padding-left: 999em !important;
 	    padding-right: 999em !important;
-
+	    &:first-child{
+	    	padding-top: 0;
+	    }
        
 	    .meta{
     	    margin-bottom: 8px;
     	    font-family: $font_1bold;
 			color: $color_3;
 			letter-spacing: 2px;
+		    font-size: 14px;
     	    .date{
 				color: $color_3;
     	    }

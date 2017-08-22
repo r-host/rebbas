@@ -1,6 +1,5 @@
 .footer{
 	background: #1c1c1c;
-    color: #ababab;
     font-weight: 300;
     padding: 60px 0px;
     text-align: center;
@@ -29,6 +28,7 @@
     	font-size: 11px;
     	font-family: $font_1bold;
     	color: #ababab;
+    	padding-top: 40px;
     }
     @media (max-width: 767px) {
 		.footer-widget{
